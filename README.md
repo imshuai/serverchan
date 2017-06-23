@@ -13,7 +13,7 @@
 ## useage
 1. visit [http://sc.ftqq.com](http://sc.ftqq.com), use your github account to login
 2. visit [http://sc.ftqq.com/?c=wechat&a=bind](http://sc.ftqq.com/?c=wechat&a=bind), use your Wechat APP scan the QRcode and bind your WeChat account to ServerChan
-3. visit [http://sc.ftqq.com/?c=code](http://sc.ftqq.com/?c=code) to your ServerChan secret key
+3. visit [http://sc.ftqq.com/?c=code](http://sc.ftqq.com/?c=code) and get your ServerChan secret key
 4. follow the example bellow and send your first message to your WeChat APP
 
 ## example
