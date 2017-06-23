@@ -19,8 +19,7 @@ func NewServerChan(secretKey string) *ServerChan {
 }
 
 func (sc *ServerChan) Send(title, content string) (string, error) {
-	querystring := "text=" + url.QueryEscape(title) + "&desp=" + content
-	uVlues, err := url.ParseQuery(querystring)
+	uVlues, err := url.ParseQuery("text=" + url.QueryEscape(title) + "&desp=" + content)
 	if err != nil {
 		return "error", err
 	}
@@ -36,7 +35,7 @@ func (sc *ServerChan) Send(title, content string) (string, error) {
 	t := make(map[string]interface{}, 0)
 	json.Unmarshal(p, &t)
 	if int(t["errno"].(float64)) == 1024 {
-		return t["errmsg"].(string), errors.New("同样内容的消息一分钟只能发送一次")
+		return t["errmsg"].(string), errors.New("messages of the same content can only be sent once a minute")
 	}
 	return "success", nil
 }
