@@ -3,7 +3,7 @@
 [![GoDoc](https://godoc.org/github.com/imshuai/serverchan?status.svg)](https://godoc.org/github.com/imshuai/serverchan)
 ## 安装
 
-`go get -v -u github.com/imshuai/go-serverchan`
+`go get -v -u github.com/imshuai/serverchan`
 
 ## 注意
 
@@ -24,7 +24,7 @@ package main
 import (
 	"log"
 
-	"github.com/imshuai/go-serverchan"
+	"github.com/imshuai/serverchan"
 )
 
 const (
