@@ -1,3 +1,4 @@
+//Package serverchan make it easier for you to use ServerChan service
 package serverchan
 
 import (
