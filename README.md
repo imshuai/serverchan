@@ -1,23 +1,24 @@
 # Server Chan golang SDK
 
-## install
+[![GoDoc](https://godoc.org/github.com/imshuai/serverchan?status.svg)](https://godoc.org/github.com/imshuai/serverchan)
+## 安装
 
 `go get -v -u github.com/imshuai/go-serverchan`
 
-## attention
+## 注意
 
-1.  message title must be escaped and content max length: 256 byte, required
-2.  message content max length: 64 kB, suport Markdown syntax, nullable
-3.  messages of the same content can only be sent once a minute
+1.  消息标题`title`必须经过转义，内容大小为256 Byte，必须参数
+2.  消息内容`content`不需要转义，内容大小为64 KByte，支持`Markdown`语法，可选，默认为空
+3.  同样内容的消息一分钟只能发送成功一次
 
-## useage
-1. visit [http://sc.ftqq.com](http://sc.ftqq.com), use your github account to login
-2. visit [http://sc.ftqq.com/?c=wechat&a=bind](http://sc.ftqq.com/?c=wechat&a=bind), use your Wechat APP scan the QRcode and bind your WeChat account to ServerChan
-3. visit [http://sc.ftqq.com/?c=code](http://sc.ftqq.com/?c=code) and get your ServerChan secret key
-4. follow the example bellow and send your first message to your WeChat APP
+## 使用方法
+1. 访问 [http://sc.ftqq.com](http://sc.ftqq.com), 使用你的Github账号登录
+2. 访问 [http://sc.ftqq.com/?c=wechat&a=bind](http://sc.ftqq.com/?c=wechat&a=bind), 使用微信扫描二维码绑定微信账号以接收消息
+3. 访问 [http://sc.ftqq.com/?c=code](http://sc.ftqq.com/?c=code) 获取你的ServerChan密匙`secret key`
+4. 按照下面的示例代码编写你自己的消息通知程序
 
-## example
-```
+## 示例代码
+```c#
 package main
 
 import (
@@ -43,4 +44,4 @@ func main() {
 ```
 ## license
 
-This package is made available under an [Apache License v2](http://www.apache.org/licenses/)
+[Apache License version 2.0](http://www.apache.org/licenses/)
